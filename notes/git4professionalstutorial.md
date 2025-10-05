@@ -1,29 +1,30 @@
-From Git for Professionals Tutorial:
+# From Git for Professionals Tutorial:
 Link: https://www.youtube.com/watch?v=Uszj_k0DGsg
+
 Side Note: Look up Tower for Git, a GUI for working with GitHub.
 
-  Topic 1: Perfect Commit
-  - Don't cram everything into one commit.
-  - A good commit separates different topics.
-  - The Git staging area lets you select individual files or parts of files for one commit.
-  - You can use "git status" in terminal to see changes not staged for commit.
-  - To include specific file, use "git add [filename]"
-  - Use "git diff [filename]" to see the changes that are being made in that file.
-  - Use -p with git add to go down to the patch level. Now git will step through each chunk of changes.
-  - Crucial to have a commit history that is easy to read and understand.
-  - The perfect commit message contains:
-    * Subject = concise summary of what happened
-      o If you have trouble writing something concise, you might have too many topics.
-    * Body = more detail explanation
-      o What is different from before?
-      o What's the reason for the change?
-      o Is there anything to watch out for?
-      o Is there anything particularly remarkable?
-  - Typing "git commit" will bring up the editor window to make the commit message.
-  - Subject goes on top line. An empty line after this will let the editor know we are now writing body of message.
-  - Typing "git log" shows a log of previous commits.
-    
-  Topic 2: Branching Strategies
+## Topic 1: Perfect Commit
+- Don't cram everything into one commit.
+- A good commit separates different topics.
+- The Git staging area lets you select individual files or parts of files for one commit.
+- You can use "git status" in terminal to see changes not staged for commit.
+- To include specific file, use "git add [filename]"
+- Use "git diff [filename]" to see the changes that are being made in that file.
+- Use -p with git add to go down to the patch level. Now git will step through each chunk of changes.
+- Crucial to have a commit history that is easy to read and understand.
+- The perfect commit message contains:
+  * Subject = concise summary of what happened
+    - If you have trouble writing something concise, you might have too many topics.
+  * Body = more detail explanation
+    - What is different from before?
+    - What's the reason for the change?
+    - Is there anything to watch out for?
+    - Is there anything particularly remarkable?
+- Typing "git commit" will bring up the editor window to make the commit message.
+- Subject goes on top line. An empty line after this will let the editor know we are now writing body of message.
+- Typing "git log" shows a log of previous commits.
+
+## Topic 2: Branching Strategies
   - Git leaves it completely up to you for how you work with branches.
   - Make sure to agree on a branching workflow with your team.
   - Make up a written list of best practices for how work should be done.
@@ -67,7 +68,7 @@ Side Note: Look up Tower for Git, a GUI for working with GitHub.
     * once you are confident develop branch is ready for production, you merge it back into main, add a tag for that release commit on main, then close that release branch.
   - No perfect branching model, adjust it to your project and your team
 
-  Topic 3: Pull Requests
+## Topic 3: Pull Requests
   - Pull requests are not a core feature, they are provided by your host, so they will look different on different platforms (GitHub vs Bitbucket)
   - Without pull requests, you would need to merge directly.
   - Pull request allows other people to review and provide feedback on the code before it merges.
@@ -78,7 +79,7 @@ Side Note: Look up Tower for Git, a GUI for working with GitHub.
   - Use "git branch [name]" to create a branch of the code. Then use "git checkout [same name]" to switch to that branch.
   - You can tell GitHub which branch you want to merge into in the pull request.
 
-  Topic 4: Merge Conflicts
+## Topic 4: Merge Conflicts
   - Merge conflicts occur when integrating commits from different sources
     * These can include git merge, git rebase, git pull, git cherry-pick, and git stash apply.
     * All of these perform some kind of integration, which is when merge conflicts happen.
@@ -99,22 +100,22 @@ Side Note: Look up Tower for Git, a GUI for working with GitHub.
   - After cleaning, commit like any other change.
   - Can configure it to have a safety copy just in case.
 
-  Topic 5: Merge vs. Rebase
+## Topic 5: Merge vs. Rebase
   - Having separate containers for your work is very helpful.
   - Goal of integration is to combine the current state of two branches.
   - When Git performs a merge, it looks for three commits:
-    1.) Common Ancestor
-    2.) Last commit on Branch A
-    3.) Last commit on Branch B
+    1. Common Ancestor
+    2. Last commit on Branch A
+    3. Last commit on Branch B
   - A Fast-Forward merge is the simplest merge in Git. Both branches share the exact same history.  (Simple, unrealistic)
   - A Merge Commit is created automatically by Git and does not wrap a set of related changes. It connects two branches like a knot.
   - Rebase is not better or worse than merge, it's just different.
   - Rebase is a straight line of commits.
   - To start rebase, do "git rebase [branch to integrate]".
   - Steps of Rebase:
-    1.) Git will remove all commits on Branch A that happened after the common ancestor commit, but they are not thrown away (saved somewhere else temporarily).
-    2.) Git applies new commits from Branch B.  Temporarily, both branches look exactly the same.
-    3.) The commits from Branch A that were saved temporarily are positioned on top of the commits from Branch B. They are "rebased".
+    1. Git will remove all commits on Branch A that happened after the common ancestor commit, but they are not thrown away (saved somewhere else temporarily).
+    2. Git applies new commits from Branch B.  Temporarily, both branches look exactly the same.
+    3. The commits from Branch A that were saved temporarily are positioned on top of the commits from Branch B. They are "rebased".
   - Result is it looks like commmits happened in a straight line.
   - Rebase rewrites commit history. Before rebase, Branch A's commit's parent was the common ancestor commit. After rebase, its parent is the last commit from Branch B.
   - Creates a new commit with a new commit hash.
