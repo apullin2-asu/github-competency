@@ -1,5 +1,5 @@
-# github-notes
-Notes on how to work in Github.
+# github-competency
+Project for CSE 485 at ASU.
 
     
   
