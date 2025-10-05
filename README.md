@@ -1,5 +1,5 @@
-# github-notes
-Notes on how to work in Github.
+# github-competency
+Repository for ASU 485 "Growing a Competency" project.
 
-    
-  
+# About Me
+My name is Amanda.
