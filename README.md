@@ -9,4 +9,4 @@ Project for CSE 485 at ASU.
 - https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
 - https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github
 - https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting
-  
+- https://mermaid.js.org/syntax/flowchart.html
